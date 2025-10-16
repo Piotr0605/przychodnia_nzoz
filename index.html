@@ -29,16 +29,17 @@
     </a>
 
     <div class="top-actions">
-      <a class="btn ghost call-btn" href="tel:+48850000000" aria-label="Zadzwoń">(85) 000 00 00</a>
-      <a class="btn primary" href="#kontakt">Rejestracja</a>
+  <a class="btn primary call-btn" href="tel:+48850000000">📞 Zadzwoń</a>
+  <a class="btn outline" href="rejestracja.html">Rejestracja</a>
     </div>
+
   </header>
 
   <!-- PANEL BOCZNY -->
   <aside id="drawer" class="drawer" aria-hidden="true">
     <div class="drawer-header">
       <div class="drawer-title">
-        <img src="img/logo.png" alt="" />
+        <img src="logo.png" alt="Logo NZOZ Przychodnia" class="drawer-logo" />
         <div>
           <strong>NZOZ Przychodnia</strong>
           <span>POZ • NFZ</span>
@@ -84,18 +85,22 @@
             Wizyty stacjonarne i teleporady. E-recepty, e-skierowania, bilanse, szczepienia. Nowi pacjenci mile widziani.
           </p>
           <div class="hero-cta">
-            <a href="#kontakt" class="btn primary">Zostań pacjentem</a>
+            <a href="rejestracja.html" class="btn primary">Zostań pacjentem</a>
             <a href="tel:+48850000000" class="btn ghost call-btn">📞 Zadzwoń teraz</a>
           </div>
         </div>
-        <div class="hero-card">
-          <h3 class="h3" id="godziny">Godziny otwarcia</h3>
-          <ul class="hours">
-            <li><b>Pon–Pt</b> <span>08:00–18:00</span></li>
-            <li><b>Sob–Nd</b> <span>nieczynne</span></li>
-          </ul>
-          <a href="tel:+48850000000" class="btn block primary call-btn">📞 Zadzwoń: (85) 000 00 00</a>
-        </div>
+       <div class="hero-card">
+  <div class="card-header">
+    <span class="clock-icon">🕒</span>
+    <h3 id="godziny">Godziny otwarcia</h3>
+  </div>
+  <ul class="hours">
+    <li><b>Pon–Pt</b> <span>08:00–18:00</span></li>
+    <li><b>Sob–Nd</b> <span>nieczynne</span></li>
+  </ul>
+  <p class="muted small">Wizyty umawiane telefonicznie i osobiście w godzinach pracy przychodni.</p>
+</div>
+
       </div>
     </section>
 
@@ -169,7 +174,11 @@
             </div>
             <input aria-label="E-mail" type="email" placeholder="E-mail" required>
             <textarea aria-label="Wiadomość" rows="5" placeholder="Wiadomość" required></textarea>
-            <label class="check"><input type="checkbox" required> Akceptuję <a href="polityka-rodo.html">politykę prywatności</a></label>
+              <div class="consent">
+               <input type="checkbox" id="rodo" required>
+               <label for="rodo">Akceptuję <a href="polityka-rodo.html" target="_blank">politykę prywatności</a></label>
+            </div>
+
             <button class="btn primary" type="submit">Wyślij</button>
           </form>
         </div>

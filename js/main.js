@@ -56,3 +56,17 @@ tablists.forEach(wrapper=>{
   });
   activate(0);
 });
+// --- Zamykanie panelu bocznego po kliknięciu linku ---
+document.querySelectorAll('.drawer-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    const drawer = document.getElementById('drawer');
+    const backdrop = document.getElementById('backdrop');
+
+    drawer.classList.remove('open');
+    backdrop.hidden = true;
+
+    // Aktualizacja atrybutów dostępności
+    document.getElementById('openDrawer').setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  });
+});
