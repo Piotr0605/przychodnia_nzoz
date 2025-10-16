@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NZOZ Przychodnia Rodzinna – Iwona Okuła</title>
+  <meta name="description" content="Lekarz rodzinny (POZ). Rejestracja, godziny, usługi, zespół i kontakt. Umowa z NFZ." />
+  <link rel="icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+
+  <!-- TOPBAR -->
+  <header class="topbar" aria-label="Górny pasek">
+    <button class="icon-btn" id="openDrawer" aria-controls="drawer" aria-expanded="false" aria-label="Otwórz menu">
+      <!-- hamburger -->
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a class="brand" href="index.html" aria-label="Strona główna">
+  <img class="brand-logo" src="logo.png" alt="Logo przychodni" />
+  <div class="brand-text">
+    <strong>NZOZ Przychodnia Rodzinna</strong>
+    <span>Iwona Okuła</span>
+  </div>
+</a>
+    <div class="top-actions">
+      <a class="btn ghost" href="tel:+48850000000" aria-label="Zadzwoń">(85) 000 00 00</a>
+      <a class="btn primary" href="#kontakt">Rejestracja</a>
+    </div>
+  </header>
+
+  <!-- DRAWER (panel boczny) -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <img src="img/logo.png" alt="" />
+        <div>
+          <strong>NZOZ Przychodnia</strong>
+          <span>POZ • NFZ</span>
+        </div>
+      </div>
+      <button class="icon-btn" id="closeDrawer" aria-label="Zamknij menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Nawigacja boczna">
+      <a href="#o-nas"><span>🏠</span> O nas</a>
+      <a href="#uslugi"><span>🩺</span> Usługi</a>
+      <a href="#zespol"><span>👩‍⚕️</span> Zespół</a>
+      <a href="#godziny"><span>🕒</span> Godziny</a>
+      <a href="#kontakt"><span>📞</span> Kontakt</a>
+      <hr/>
+      <a href="karta-poz.html"><span>📄</span> Karta informacyjna POZ</a>
+      <a href="polityka-rodo.html"><span>🔒</span> Polityka prywatności</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <div class="a11y">
+        <button id="toggleHC">Wysoki kontrast</button>
+        <button id="toggleFS">Większa czcionka</button>
+      </div>
+      <p class="muted">© <span id="year"></span> NZOZ Przychodnia Rodzinna</p>
+    </div>
+  </aside>
+
+  <!-- backdrop -->
+  <div id="backdrop" class="backdrop" hidden></div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">POZ • Umowa z NFZ</span>
+          <h1>Nowoczesna opieka dla całej rodziny</h1>
+          <p class="lead">Wizyty stacjonarne i teleporady. E-recepty, e-skierowania, bilanse, szczepienia. Nowi pacjenci mile widziani.</p>
+          <div class="hero-cta">
+            <a href="#kontakt" class="btn primary">Zostań pacjentem</a>
+            <a href="karta-poz.html" class="btn ghost">Karta POZ</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3 class="h3" id="godziny">Godziny otwarcia</h3>
+          <ul class="hours">
+            <li><b>Pon–Pt</b> <span>08:00–18:00</span></li>
+            <li><b>Sob–Nd</b> <span>nieczynne</span></li>
+          </ul>
+          <a href="tel:+48850000000" class="btn block">Zadzwoń: (85) 000 00 00</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- O NAS -->
+    <section id="o-nas" class="section">
+      <div class="container">
+        <h2 class="h2">O nas</h2>
+        <p class="muted">Stawiamy na profilaktykę i indywidualne podejście. Nasz zespół lekarzy, pielęgniarek i położnych wspiera pacjentów na każdym etapie życia.</p>
+      </div>
+    </section>
+
+    <!-- USŁUGI z ZAKŁADKAMI -->
+    <section id="uslugi" class="section">
+      <div class="container">
+        <div class="tabs" data-tabs>
+          <div role="tablist" class="tablist" aria-label="Zakładki usług">
+            <button role="tab" aria-selected="true" aria-controls="tab-poz" id="tab-poz-btn">POZ</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-pieleg" id="tab-pieleg-btn">Pielęgniarka</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-polozna" id="tab-polozna-btn">Położna</button>
+          </div>
+
+          <div id="tab-poz" role="tabpanel" aria-labelledby="tab-poz-btn" class="tab-panel is-active">
+            <div class="cards">
+              <article class="card"><h3>Porady</h3><p>Diagnostyka, leczenie ostrych i przewlekłych.</p></article>
+              <article class="card"><h3>E-recepty i e-skierowania</h3><p>Szybko i bezpiecznie, także po teleporadzie.</p></article>
+              <article class="card"><h3>Bilanse i orzeczenia</h3><p>Dla dzieci, młodzieży i dorosłych.</p></article>
+            </div>
+          </div>
+
+          <div id="tab-pieleg" role="tabpanel" aria-labelledby="tab-pieleg-btn" tabindex="-1" class="tab-panel">
+            <div class="cards">
+              <article class="card"><h3>Iniekcje</h3><p>Podanie leków wg zlecenia.</p></article>
+              <article class="card"><h3>Opieka domowa</h3><p>Świadczenia w domu pacjenta (wg wskazań).</p></article>
+              <article class="card"><h3>Pomiar parametrów</h3><p>RR, glukoza, saturacja.</p></article>
+            </div>
+          </div>
+
+          <div id="tab-polozna" role="tabpanel" aria-labelledby="tab-polozna-btn" tabindex="-1" class="tab-panel">
+            <div class="cards">
+              <article class="card"><h3>Edukacja przedporodowa</h3><p>Przygotowanie do porodu i połogu.</p></article>
+              <article class="card"><h3>Wsparcie laktacyjne</h3><p>Konsultacje i nauka karmienia.</p></article>
+              <article class="card"><h3>Wizyty patronażowe</h3><p>Pierwsze tygodnie z noworodkiem.</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZESPÓŁ -->
+    <section id="zespol" class="section">
+      <div class="container">
+        <h2 class="h2">Nasz zespół</h2>
+        <div class="team">
+          <article class="person">
+            <div class="avatar" aria-hidden="true">AK</div>
+            <h4>dr Anna Kowalska</h4>
+            <p class="muted">Medycyna rodzinna • opieka dorosłych i dzieci</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">JN</div>
+            <h4>dr Jan Nowak</h4>
+            <p class="muted">Diagnostyka, e-recepty, teleporady</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">EW</div>
+            <h4>mgr Ewa Wiśniewska</h4>
+            <p class="muted">Położna • edukacja i patronaż</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h3 class="h3">Kontakt</h3>
+          <p class="muted">
+            ul. Mickiewicza 44A, 15-223 Białystok<br>
+            e-mail: rejestracja@przychodnia.pl<br>
+            tel.: (85) 000 00 00
+          </p>
+          <iframe class="map" title="Mapa dojazdu"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.336150234737!2d23.169285977229606!3d53.12211107222514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ffeac796f31eb%3A0x42ca34722184c89e!2sAdama%20Mickiewicza%2044A%2C%2015-223%20Bia%C5%82ystok!5e0!3m2!1spl!2spl!4v1760552353012!5m2!1spl!2spl"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Napisz do nas</h3>
+          <form class="form" onsubmit="event.preventDefault(); alert('Dziękujemy! Skontaktujemy się wkrótce.');">
+            <div class="row">
+              <input aria-label="Imię i nazwisko" placeholder="Imię i nazwisko" required>
+              <input aria-label="Telefon" type="tel" placeholder="Telefon">
+            </div>
+            <input aria-label="E-mail" type="email" placeholder="E-mail" required>
+            <textarea aria-label="Wiadomość" rows="5" placeholder="Wiadomość" required></textarea>
+            <label class="check"><input type="checkbox" required> Akceptuję <a href="polityka-rodo.html">politykę prywatności</a></label>
+            <button class="btn primary" type="submit">Wyślij</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <small>© <span id="year"></span> NZOZ Przychodnia Rodzinna</small>
+      <nav class="footer-links">
+        <a href="karta-poz.html">Karta POZ</a>
+        <a href="polityka-rodo.html">Polityka prywatności</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
